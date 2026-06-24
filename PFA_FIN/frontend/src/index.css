@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f6fa;
+  color: #1a1a2e;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+/* ── Page transitions ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-8px); }
+}
+
+/* Landing ↔ Dashboard: slide from right */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideOutLeft {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(-32px); }
+}
+
+/* Tab switch: fade + tiny Y */
+@keyframes tabFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Dashboard content refresh (file switch) */
+@keyframes dashRefresh {
+  0%   { opacity: 1; }
+  15%  { opacity: 0.35; transform: translateY(-4px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Score number tick (counter feel) */
+@keyframes scorePop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.18); }
+  70%  { transform: scale(0.96); }
+  100% { transform: scale(1); }
+}
+
+/* Row highlight flash (history table) */
+@keyframes rowFlash {
+  0%   { background: rgba(37,99,235,0.18); }
+  100% { background: transparent; }
+}
+
+/* Shimmer sweep for card refresh */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+/* Spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Pulse dot (live indicator) */
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,99,235,0.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(37,99,235,0); }
+}
+
+/* ── Utility classes ── */
+.animate-fadeIn     { animation: fadeIn 0.35s ease both; }
+.animate-slideIn    { animation: slideInRight 0.38s cubic-bezier(0.22,1,0.36,1) both; }
+.animate-tabFadeIn  { animation: tabFadeIn 0.28s ease both; }
+.animate-dashRefresh{ animation: dashRefresh 0.4s ease both; }
+.animate-scorePop   { animation: scorePop 0.45s cubic-bezier(0.22,1,0.36,1) both; }
+.animate-rowFlash   { animation: rowFlash 0.9s ease-out both; }
+.animate-pulseDot   { animation: pulseDot 1.6s ease-in-out infinite; }

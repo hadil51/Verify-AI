@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+python-multipart
+tensorflow
+opencv-python-headless
+numpy
+Pillow
+pillow-heif
+passporteye
+jpegio
+gdown
+pytesseract
+pandas
+scikit-image
+imageio
+matplotlib
+easyocr

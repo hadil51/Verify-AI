@@ -1,0 +1,4 @@
+{
+  "temperature": 1.0,
+  "_comment": "Copy to calibration.json. T>1 spreads probabilities (less extreme); T<1 sharpens. Label vs threshold still uses raw model output."
+}
