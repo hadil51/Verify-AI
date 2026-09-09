@@ -246,13 +246,6 @@ Response highlights: `global_score_display`, `verdict`, `cnn`, `ocr`, `font`, `m
 
 ---
 
-## Disclaimer
-
-Verify AI is a **research / portfolio** demonstrator for document forensics workflows. Scores are decision-support signals, not legal proof of authenticity or fraud. Always combine automated results with human review for high-stakes use cases.
-
-Sample documents shown in screenshots are labelled or specimen-style materials used for engineering evaluation.
-
----
 
 ## Author
 
